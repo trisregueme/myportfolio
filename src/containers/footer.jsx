@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const FooterSection = styled.footer`
    display: flex;
    flex-direction: space-between;
+   height: 200px;
 `;
 
 export default function Footer() {

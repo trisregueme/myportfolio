@@ -25,20 +25,26 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
     font-family: 'UdaraMalam' ;
     src: url(${UdaraMalam}) format('opentype');
 }
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 html {
-    height: 100%;
-    background: radial-gradient(ellipse at bottom, #1c1c1c 0%, #101010 80%);
+    background: radial-gradient(ellipse at top, #1c1c1c 0%, #101010 85%);
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'JustusOld', Helvetica, Arial, sans-serif;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     color: white;
 }
 #root{

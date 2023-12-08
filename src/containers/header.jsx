@@ -4,6 +4,7 @@ const HeaderSection = styled.header`
    display: flex;
    justify-content: space-around;
    align-items: center;
+   height: 8vh;
    width: 100%;
    border-bottom: 1px solid;
    p {
