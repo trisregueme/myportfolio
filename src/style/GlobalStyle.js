@@ -28,13 +28,23 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 @keyframes slidein {
     0% {
         opacity: 0;
-        transform: translateY(25px);
+        transform: translateY(-25px);
     }
     100% {
         opacity: 1;
         transform: translateY(0px);
     }
 }
+@keyframes animloader {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+} 
 html {
     background: radial-gradient(ellipse at top, #1c1c1c 0%, #101010 85%);
 }
