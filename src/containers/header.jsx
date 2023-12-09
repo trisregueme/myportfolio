@@ -55,8 +55,8 @@ export default function Header() {
          <p>Tristan.R</p>
          <Nav>
             <a>Home</a>
-            <a>Selected Projects</a>
             <a>My Skills</a>
+            <a>Selected Projects</a>
             <a>About Me</a>
          </Nav>
          <Contact>Contact</Contact>

@@ -4,7 +4,7 @@ import { device } from '../style/breakpoints';
 
 const ItsMe = styled.div`
    opacity: 0;
-   animation: 0.25s ease-in 0.6s slidein;
+   animation: 0.25s ease-in 0.6s slidefromtop;
    animation-fill-mode: forwards;
    margin-top: 1.2rem;
    p {

@@ -12,8 +12,6 @@ const HeroSection = styled.section`
    justify-content: center;
    align-items: center;
    height: calc(100vh - 75px);
-   margin: auto;
-   max-width: 1080px;
    gap: 3rem;
    @media ${device.tablet} {
       flex-direction: column-reverse;
@@ -29,13 +27,13 @@ const HeroContent = styled.div`
       font-family: 'Molesk';
       margin-left: 1.5rem;
       opacity: 0;
-      animation: 0.25s ease-in-out 0.6s slidein;
+      animation: 0.25s ease-in-out 0.6s slidefromtop;
       animation-fill-mode: forwards;
    }
    p {
       font-size: clamp(0.5rem, 5vw + 1rem, 1.2rem);
       opacity: 0;
-      animation: 0.25s ease-in-out 0.2s slidein;
+      animation: 0.25s ease-in-out 0.2s slidefromtop;
       animation-fill-mode: forwards;
    }
    @media ${device.tablet} {
@@ -49,7 +47,7 @@ const SocialsPresenting = styled.div`
    gap: 3rem;
    margin: 1.5rem 0 0 1.5rem;
    opacity: 0;
-   animation: 0.25s ease-in-out 0.9s slidein;
+   animation: 0.25s ease-in-out 0.9s slidefromtop;
    animation-fill-mode: forwards;
    img {
       filter: grayscale(100%) contrast(100%);
@@ -69,6 +67,13 @@ const SocialsPresenting = styled.div`
    }
 `;
 
+const socialinfos = [
+   'www.linkedin.com/in/tristan-réguème-a0b1922a4',
+   'https://github.com/trisregueme',
+   'https://twitter.com/TristanRegueme',
+   'https://discord.gg/pk5GM5BrXa',
+];
+
 export default function HeroBanner() {
    return (
       <HeroSection>
@@ -77,20 +82,24 @@ export default function HeroBanner() {
             <h1>
                Tristan <br /> Réguème
             </h1>
-            <p>- French Fontend Developer, Aspiring Full-Stack Developer</p>
+            <p>- French Font-end Developer, Aspiring Full-Stack Developer</p>
             <SocialsPresenting>
-               <a href=''>
-                  <Social logo={linkedin} />
-               </a>
-               <a href=''>
-                  <Social logo={github} />
-               </a>
-               <a href=''>
-                  <Social logo={twitter} />
-               </a>
-               <a href=''>
-                  <Social logo={discord} />
-               </a>
+               <Social
+                  href={socialinfos[0]}
+                  logo={linkedin}
+               />
+               <Social
+                  href={socialinfos[1]}
+                  logo={github}
+               />
+               <Social
+                  href={socialinfos[2]}
+                  logo={twitter}
+               />
+               <Social
+                  href={socialinfos[3]}
+                  logo={discord}
+               />
             </SocialsPresenting>
          </HeroContent>
          <ProfilePicture />

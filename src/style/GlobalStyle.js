@@ -25,10 +25,20 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
     font-family: 'UdaraMalam' ;
     src: url(${UdaraMalam}) format('opentype');
 }
-@keyframes slidein {
+@keyframes slidefromtop {
     0% {
         opacity: 0;
         transform: translateY(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes slidefrombottom {
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
     }
     100% {
         opacity: 1;
@@ -46,7 +56,7 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
     }
 } 
 html {
-    background: radial-gradient(ellipse at top, #1c1c1c 0%, #101010 85%);
+    background: radial-gradient(ellipse at top, #0d0c0c 0%, #2d2c2c 90%);
 }
 *{
     margin: 0;
@@ -56,6 +66,14 @@ html {
 }
 body {
     color: white;
+}
+h2{
+    font-family: 'Molesk';
+    font-size: 1.8rem;
+}
+h3{
+    font-family: 'JustusBold';
+    font-size: 1.4rem;
 }
 #root{
     width: 100%;

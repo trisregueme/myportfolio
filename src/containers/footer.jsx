@@ -2,15 +2,24 @@ import styled from 'styled-components';
 
 const FooterSection = styled.footer`
    display: flex;
-   flex-direction: space-between;
-   height: 200px;
+   flex-direction: column;
+   justify-content: end;
+   align-items: center;
+   height: 20rem;
+   text-align: center;
+   gap: 0.5rem;
+   p:last-child {
+      font-family: 'UdaraMalam';
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+   }
 `;
 
 export default function Footer() {
    return (
       <FooterSection>
-         <h1>Hello i'm Footer</h1>
-         <p>Nono i'm the real Footer !</p>
+         <p>Portfolio Designed and built by</p>
+         <p>Tristan.R</p>
       </FooterSection>
    );
 }
