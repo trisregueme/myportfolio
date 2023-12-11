@@ -20,7 +20,7 @@ const ItsMe = styled.div`
    }
 `;
 const ImgWrapper = styled.div`
-   max-height: 32vh;
+   max-height: 36vh;
    width: auto;
    aspect-ratio: 1/1;
    overflow: hidden;

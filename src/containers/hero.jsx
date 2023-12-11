@@ -9,33 +9,38 @@ import { device } from '../style/breakpoints';
 
 const HeroSection = styled.section`
    display: flex;
-   justify-content: center;
+   justify-content: space-around;
    align-items: center;
-   height: calc(100vh - 75px);
-   gap: 3rem;
+   max-width: 1250px;
+   margin: auto;
+   height: calc(100vh - 74px);
    @media ${device.tablet} {
       flex-direction: column-reverse;
+      justify-content: center;
       gap: 1rem;
+      margin-bottom: 3.5rem;
    }
 `;
-
 const HeroContent = styled.div`
    display: flex;
    flex-direction: column;
-   h1 {
-      font-size: clamp(3.2rem, 5vw + 1rem, 6.2rem);
-      font-family: 'Molesk';
-      margin-left: 1.5rem;
-      opacity: 0;
-      animation: 0.25s ease-in-out 0.6s slidefromtop;
-      animation-fill-mode: forwards;
+`;
+const HeroTitle = styled.h1`
+   font-size: clamp(3.2rem, 5vw + 1rem, 6.2rem);
+   font-family: 'Molesk';
+   margin-left: 1.5rem;
+   opacity: 0;
+   animation: 0.25s ease-in-out 0.6s slidefromtop;
+   animation-fill-mode: both;
+   @media ${device.tablet} {
+      margin-left: 0rem;
    }
-   p {
-      font-size: clamp(0.5rem, 5vw + 1rem, 1.2rem);
-      opacity: 0;
-      animation: 0.25s ease-in-out 0.2s slidefromtop;
-      animation-fill-mode: forwards;
-   }
+`;
+const HeroText = styled.p`
+   font-size: clamp(0.5rem, 1vw + 0.5rem, 1.2rem);
+   opacity: 0;
+   animation: 0.25s ease-in-out 0.2s slidefromtop;
+   animation-fill-mode: both;
    @media ${device.tablet} {
       text-align: center;
    }
@@ -50,24 +55,21 @@ const SocialsPresenting = styled.div`
    animation: 0.25s ease-in-out 0.9s slidefromtop;
    animation-fill-mode: forwards;
    img {
-      filter: grayscale(100%) contrast(100%);
-      transition:
-         filter 0.5s,
-         transform 0.5s;
-      height: 5vh;
-      width: auto;
-      &:hover {
-         filter: grayscale(0%) contrast(115%);
-         transform: scale(1.2);
-         cursor: pointer;
-      }
+      min-width: 60px;
+      min-height: 60px;
    }
    @media ${device.tablet} {
       justify-content: center;
    }
+   @media ${device.tablet} {
+      img {
+         min-height: 45px;
+         min-width: 45px;
+      }
+   }
 `;
 
-const socialinfos = [
+export const socialinfos = [
    'www.linkedin.com/in/tristan-réguème-a0b1922a4',
    'https://github.com/trisregueme',
    'https://twitter.com/TristanRegueme',
@@ -78,11 +80,13 @@ export default function HeroBanner() {
    return (
       <HeroSection>
          <HeroContent>
-            <p>Hello there ! I'm -</p>
-            <h1>
+            <HeroText>Hello there ! I'm -</HeroText>
+            <HeroTitle>
                Tristan <br /> Réguème
-            </h1>
-            <p>- French Font-end Developer, Aspiring Full-Stack Developer</p>
+            </HeroTitle>
+            <HeroText>
+               - French Font-end Developer, Aspiring Full-Stack Developer
+            </HeroText>
             <SocialsPresenting>
                <Social
                   href={socialinfos[0]}

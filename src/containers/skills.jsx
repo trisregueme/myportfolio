@@ -3,68 +3,62 @@ import { useInView } from 'react-intersection-observer';
 import Frontend from '../components/frontend';
 import Design from '../components/design';
 import Others from '../components/others';
+import { device } from '../style/breakpoints';
+import '../style/animation.css';
 
 export const PartSection = styled.section`
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-`;
-const SkillsTitle = styled.h2`
    opacity: 0;
-   animation: ${(props) =>
-      props.isVisible ? '0.4s ease-in-out slidefrombottom' : 'none'};
-   animation-fill-mode: forwards;
 `;
 const SkillsDiv = styled.div`
    display: flex;
-   justify-content: space-around;
-   margin-top: 2rem;
+   justify-content: space-between;
+   margin-top: 2.5rem;
    width: 100%;
+   @media ${device.tablet} {
+      justify-content: space-around;
+      h3 {
+         font-size: 1.3rem;
+      }
+      p {
+         font-size: 0.9rem;
+      }
+      img {
+         height: 25px;
+         width: 25px;
+      }
+   }
 `;
 const SkillsContent = styled.div`
    display: flex;
    flex-direction: column;
-   opacity: 0;
-   animation: ${(props) =>
-      props.isVisible ? '0.4s ease-in-out slidefrombottom' : 'none'};
-   animation-fill-mode: forwards;
    gap: 0.8rem;
    h3 {
       margin-bottom: 0.5rem;
    }
 `;
-
 export default function Skills() {
    const [ref, inView] = useInView({
       triggerOnce: false,
    });
-
    return (
-      <PartSection>
-         <SkillsTitle
-            ref={ref}
-            isVisible={inView}
-         >
-            Skills
-         </SkillsTitle>
+      <PartSection
+         ref={ref}
+         className={inView ? 'animate' : ''}
+         id='skills'
+      >
+         <h2>Skills</h2>
          <SkillsDiv>
-            <SkillsContent
-               ref={ref}
-               isVisible={inView}
-            >
+            <SkillsContent>
                <Frontend />
             </SkillsContent>
-            <SkillsContent
-               ref={ref}
-               isVisible={inView}
-            >
+            <SkillsContent>
                <Design />
             </SkillsContent>
-            <SkillsContent
-               ref={ref}
-               isVisible={inView}
-            >
+            <SkillsContent>
                <Others />
             </SkillsContent>
          </SkillsDiv>

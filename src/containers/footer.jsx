@@ -3,22 +3,24 @@ import styled from 'styled-components';
 const FooterSection = styled.footer`
    display: flex;
    flex-direction: column;
-   justify-content: end;
    align-items: center;
-   height: 20rem;
+   margin-top: 10rem;
    text-align: center;
-   gap: 0.5rem;
+   border-top: 1px solid;
+   p {
+      margin-top: 1rem;
+   }
    p:last-child {
       font-family: 'UdaraMalam';
       font-size: 3rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
    }
 `;
 
 export default function Footer() {
    return (
       <FooterSection>
-         <p>Portfolio Designed and built by</p>
+         <p>Portfolio designed and built by</p>
          <p>Tristan.R</p>
       </FooterSection>
    );

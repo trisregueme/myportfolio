@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../style/breakpoints';
 
 const HeaderSection = styled.header`
    display: flex;
@@ -28,8 +29,11 @@ const HeaderSection = styled.header`
 const Nav = styled.nav`
    display: flex;
    gap: 1.5rem;
+   @media ${device.mobile} {
+      display: none;
+   }
 `;
-const Contact = styled.button`
+const Contact = styled.a`
    color: white;
    border: 1px solid;
    border-radius: 5px;
@@ -54,12 +58,10 @@ export default function Header() {
       <HeaderSection>
          <p>Tristan.R</p>
          <Nav>
-            <a>Home</a>
-            <a>My Skills</a>
-            <a>Selected Projects</a>
-            <a>About Me</a>
+            <a href='/#skills'>My Skills</a>
+            <a href='/#projects'>Selected Projects</a>
          </Nav>
-         <Contact>Contact</Contact>
+         <Contact href='/#contact'>Contact</Contact>
       </HeaderSection>
    );
 }

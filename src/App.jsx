@@ -6,7 +6,6 @@ import Footer from './containers/footer';
 import HeroBanner from './containers/hero';
 import Skills from './containers/skills';
 import Projects from './containers/projects';
-import Aboutme from './containers/aboutme';
 import Contact from './containers/contact';
 
 const Main = styled.main`
@@ -34,7 +33,6 @@ function App() {
          <Main>
             <Skills />
             <Projects />
-            <Aboutme />
             <Contact />
          </Main>
          <Footer />

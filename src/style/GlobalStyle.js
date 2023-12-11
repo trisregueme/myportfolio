@@ -38,7 +38,7 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 @keyframes slidefrombottom {
     0% {
         opacity: 0;
-        transform: translateY(35px);
+        transform: translateY(75px);
     }
     100% {
         opacity: 1;
@@ -69,15 +69,19 @@ body {
 }
 h2{
     font-family: 'Molesk';
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    text-align: center;
 }
 h3{
     font-family: 'JustusBold';
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
-#root{
+a{
+    color: white;
+}
+/* #root{
     width: 100%;
-}
+} */
 #grid {
     width: 100%;
     height: 1px;
