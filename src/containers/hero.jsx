@@ -70,7 +70,7 @@ const SocialsPresenting = styled.div`
 `;
 
 export const socialinfos = [
-   'www.linkedin.com/in/tristan-réguème-a0b1922a4',
+   'www.linkedin.com/in/tristanregueme',
    'https://github.com/trisregueme',
    'https://twitter.com/TristanRegueme',
    'https://discord.gg/pk5GM5BrXa',
